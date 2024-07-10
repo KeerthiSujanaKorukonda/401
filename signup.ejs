@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #11cb14, #fc2533);
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .welcome-section {
+      background-color: rgba(240, 240, 240, 0.9);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 50%;
+    }
+
+    .welcome-section h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .welcome-section p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .signup-section {
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      max-width: 50%;
+      width: 100%;
+      padding: 40px;
+    }
+
+    .signup-section h2 {
+      margin-bottom: 20px;
+      color: #007bff;
+      font-size: 24px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .input-group input:focus {
+      border-color: #2575fc;
+      outline: none;
+      box-shadow: 0 0 8px rgba(37, 117, 252, 0.2);
+    }
+
+    .signup-section button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-section button:hover {
+      background-color: #0056b3;
+    }
+
+    .signup-section p {
+      margin-top: 20px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .signup-section p a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .signup-section p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section welcome-section">
+      <div>
+        <h2>Welcome!</h2>
+        <p>Join us today by creating a new account. Enjoy exclusive features and updates.</p>
+      </div>
+    </div>
+    <div class="section signup-section">
+      <div>
+        <h2>Sign Up</h2>
+        <form action="/signupSubmit" method="POST">
+          <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
